@@ -42,3 +42,32 @@ document.addEventListener("DOMContentLoaded", () => {
         sectionObserver.observe(section);
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Obtener todos los elementos de imagen
+    const images = document.querySelectorAll(".fauna-img");
+    const modal = document.getElementById("imageModal");
+    const modalImage = document.getElementById("modalImage");
+    const closeModal = document.getElementById("closeModal");
+
+    // Mostrar el modal cuando se hace clic en una imagen
+    images.forEach(image => {
+        image.addEventListener("click", (e) => {
+            modal.style.display = "block";
+            modalImage.src = e.target.src; // Establece la imagen dentro del modal
+        });
+    });
+
+    // Cerrar el modal cuando se hace clic en la "X"
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Cerrar el modal si el usuario hace clic fuera de la imagen
+    modal.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+});
