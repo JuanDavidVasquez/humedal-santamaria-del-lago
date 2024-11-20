@@ -3,110 +3,244 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F3EDE8;
-    color: #333333;
+    background-color: #F3EDE8; /* Fondo claro tipo crema */
+    color: #333333; /* Texto oscuro para buena legibilidad */
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 /* Header */
 header {
-    background-color: #3A6351;
+    background-color: #3A6351; /* Verde bosque */
     color: #FFFFFF;
     text-align: center;
-    padding: 20px 0;
+    padding: 30px 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 header p {
-    font-size: 1.2rem;
-    margin: 5px 0 0;
+    font-size: 1.3rem;
+    margin: 10px 0 0;
+    font-style: italic;
 }
 
 /* Navigation */
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #3B9AB2;
-    margin: 0;
+    background-color: #3B9AB2; /* Azul lago */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bold;
-    padding: 10px;
-    transition: background-color 0.3s ease;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 nav ul li a:hover {
-    background-color: #8C4A32;
-    border-radius: 5px;
+    background-color: #8C4A32; /* Marrón tierra */
+    transform: scale(1.1);
 }
 
 /* Hero Section */
 .hero-image {
     width: 100%;
     height: auto;
-    display: block;
+    max-height: 500px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Main Sections */
 main section {
     padding: 20px;
-    margin: 10px auto;
+    margin: 20px auto;
     max-width: 1000px;
     background-color: #FFFFFF;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 main h2 {
     color: #3A6351;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    border-bottom: 3px solid #3B9AB2;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 main p, main ul {
     margin-bottom: 15px;
+    line-height: 1.8;
 }
 
-/* Articles (Fauna and Flora) */
-article {
-    margin-bottom: 20px;
+main ul {
+    padding-left: 20px;
 }
 
+main ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+main ul li::before {
+    content: "•";
+    color: #3B9AB2;
+    position: absolute;
+    left: 0;
+    font-size: 1.2rem;
+}
+
+/* Articles */
 article h3 {
     color: #3B9AB2;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
 }
+
+article img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Activities Section */
+#actividades {
+    text-align: center;
+}
+
+#actividades p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Map Section */
+#map iframe {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fauna Section */
+#fauna-flora {
+    padding: 40px 20px;
+    background-color: #F3EDE8;
+    text-align: center;
+}
+
+#fauna-flora h2 {
+    font-size: 2.5rem;
+    color: #3A6351;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #3B9AB2;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.fauna-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.fauna-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fauna-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.fauna-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.fauna-info {
+    padding: 15px;
+    text-align: left;
+}
+
+.fauna-info h3 {
+    font-size: 1.5rem;
+    color: #3A6351;
+    margin-bottom: 5px;
+}
+
+.fauna-info p {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 5px;
+}
+
+.fauna-info em {
+    color: #3B9AB2;
+    font-style: italic;
+}
+
 
 /* Footer */
 footer {
-    background-color: #8C4A32;
+    background-color: #8C4A32; /* Marrón tierra */
     color: #FFFFFF;
     text-align: center;
-    padding: 15px 10px;
+    padding: 20px;
     margin-top: 20px;
 }
 
 footer a {
-    color: #FFFFFF;
+    color: #F3EDE8;
     text-decoration: underline;
     transition: color 0.3s ease;
 }
 
 footer a:hover {
     color: #3B9AB2;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive Design */
@@ -116,14 +250,90 @@ footer a:hover {
     }
 
     nav ul li {
-        margin: 10px 0;
+        margin: 5px 0;
+    }
+
+    header h1 {
+        font-size: 2.4rem;
     }
 
     main section {
         padding: 15px;
     }
 
-    header h1 {
-        font-size: 2rem;
+    article img {
+        max-width: 100%;
+    }
+}
+
+/* Menú hamburguesa */
+#menuToggle {
+    display: block;
+    background-color: #3A6351;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+nav ul.visible {
+    transform: translateX(0);
+}
+
+nav ul {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #3B9AB2;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 99;
+}
+
+/* Mostrar en dispositivos móviles */
+@media (max-width: 768px) {
+    #menuToggle {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #3B9AB2;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        z-index: 99;
+    }
+
+    nav ul.hidden {
+        transform: translateX(100%);
+    }
+
+    nav ul.visible {
+        transform: translateX(0);
+    }
+
+    nav ul li {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
     }
 }

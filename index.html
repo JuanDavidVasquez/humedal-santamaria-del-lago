@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explora el Humedal Santa María del Lago, un espacio natural en Bogotá que alberga una rica biodiversidad y ofrece actividades ecológicas para toda la familia.">
-    <meta name="keywords" content="Humedal Santa María del Lago, Bogotá, biodiversidad, aves migratorias, flora nativa, turismo ecológico, Engativá">
+    <meta name="description"
+        content="Explora el Humedal Santa María del Lago, un espacio natural en Bogotá que alberga una rica biodiversidad y ofrece actividades ecológicas para toda la familia.">
+    <meta name="keywords"
+        content="Humedal Santa María del Lago, Bogotá, biodiversidad, aves migratorias, flora nativa, turismo ecológico, Engativá">
     <meta name="author" content="Juan David Vásquez">
     <meta property="og:title" content="Humedal Santa María del Lago - Bogotá, Colombia">
-    <meta property="og:description" content="Descubre la biodiversidad y las maravillas del Humedal Santa María del Lago en Bogotá.">
+    <meta property="og:description"
+        content="Descubre la biodiversidad y las maravillas del Humedal Santa María del Lago en Bogotá.">
     <meta property="og:image" content="imagen_humedal.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="./assets/styles.css">
     <title>Humedal Santa María del Lago - Bogotá</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <ul>
+            <button id="menuToggle" aria-label="Abrir menú">&#9776;</button>
+            <ul id="menu" class="hidden">
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre-humedal">Sobre el Humedal</a></li>
                 <li><a href="#fauna-flora">Fauna y Flora</a></li>
@@ -27,38 +33,67 @@
         <h1>Humedal Santa María del Lago</h1>
         <p>Un espacio natural en el corazón de Bogotá</p>
     </header>
+    
+    
 
     <main>
         <section id="inicio">
-            <img src="imagen_humedal.jpg" alt="Vista panorámica del Humedal Santa María del Lago" class="hero-image">
-            <p>El Humedal Santa María del Lago es un ecosistema vital para la biodiversidad de Bogotá. Descubre su historia, sus especies y actividades para toda la familia.</p>
-        </section>
-
+            <img src="./assets/img/panoramica.jpg" alt="Vista panorámica del Humedal Santa María del Lago" class="hero-image">
+            <p>El Humedal Santa María del Lago es un ecosistema vital para la biodiversidad de Bogotá. Descubre su
+                historia, sus especies y actividades para toda la familia.</p>
+        </section> 
         <section id="sobre-humedal">
             <h2>Sobre el Humedal</h2>
-            <p>Ubicado en la localidad de Engativá, el Humedal Santa María del Lago es uno de los 15 humedales de Bogotá y un refugio esencial para aves migratorias y fauna local. Con más de 10 hectáreas, este espacio combina conservación y recreación.</p>
+            <p>Ubicado en la localidad de Engativá, el Humedal Santa María del Lago es uno de los 15 humedales de Bogotá
+                y un refugio esencial para aves migratorias y fauna local. Con más de 10 hectáreas, este espacio combina
+                conservación y recreación.</p>
         </section>
+        <section id="map">
+            <h2>Ubicación</h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4934.298935327705!2d-74.0952428241558!3d4.69441034171028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9b3a1ca52f07%3A0x8ef5c9b1ec99c6ff!2sHumedal%20Santa%20Mar%C3%ADa%20del%20Lago!5e1!3m2!1ses-419!2sco!4v1732128824976!5m2!1ses-419!2sco"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
 
+        </section>
         <section id="fauna-flora">
             <h2>Fauna y Flora</h2>
-            <article>
-                <h3>Fauna</h3>
-                <ul>
-                    <li><strong>Tingua de pico rojo</strong> (*Gallinula chloropus*)</li>
-                    <li><strong>Focha americana</strong> (*Fulica americana*)</li>
-                    <li><strong>Cucarachero de pantano</strong> (*Cistothorus apolinari*)</li>
-                    <li><strong>Patos zambullidores</strong> (*Oxyura jamaicensis*)</li>
-                </ul>
-            </article>
-            <article>
-                <h3>Flora</h3>
-                <ul>
-                    <li>Sauces y alisos</li>
-                    <li>Buchón y lentejas de agua</li>
-                    <li>Juncos y sombrillitas de agua</li>
-                </ul>
-            </article>
+            <div class="fauna-container">
+                <article class="fauna-card">
+                    <img src="./assets/img/tinguaAzul.jpg" alt="Tingua de pico rojo">
+                    <div class="fauna-info">
+                        <h3>Tingua de pico rojo</h3>
+                        <p><em>Gallinula chloropus</em></p>
+                        <p>Una especie característica de los humedales, conocida por su distintivo pico rojo y patas verdes.</p>
+                    </div>
+                </article>
+                <article class="fauna-card">
+                    <img src="./assets/img/fochaAmericana.jpg" alt="Focha americana">
+                    <div class="fauna-info">
+                        <h3>Focha americana</h3>
+                        <p><em>Fulica americana</em></p>
+                        <p>Un ave nadadora con plumaje oscuro y un pico blanco que frecuenta las aguas tranquilas.</p>
+                    </div>
+                </article>
+                <article class="fauna-card">
+                    <img src="./assets/img/Cucarachero.webp" alt="Cucarachero de pantano">
+                    <div class="fauna-info">
+                        <h3>Cucarachero de pantano</h3>
+                        <p><em>Cistothorus apolinari</em></p>
+                        <p>Especie en peligro de extinción, endémica de los humedales andinos y símbolo de conservación.</p>
+                    </div>
+                </article>
+                <article class="fauna-card">
+                    <img src="./assets/img/zambullidores.jpg" alt="Patos zambullidores">
+                    <div class="fauna-info">
+                        <h3>Patos zambullidores</h3>
+                        <p><em>Oxyura jamaicensis</em></p>
+                        <p>Reconocidos por sus hábiles inmersiones para buscar alimento en el fondo de los humedales.</p>
+                    </div>
+                </article>
+            </div>
         </section>
+        
 
         <section id="actividades">
             <h2>Actividades</h2>
@@ -70,7 +105,9 @@
         <section id="contacto">
             <p><a href="mailto:info@humedalbogota.com">info@humedalbogota.com</a></p>
         </section>
-        <p>&copy; 2024 Humedal Santa María del Lago. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Juan Vasquez, Software Developer. Todos los derechos reservados.</p>
     </footer>
+    <script src="./assets/app.js"></script>
 </body>
+
 </html>
